@@ -14,7 +14,7 @@ function AdminRoute() {
       try {
 
         const response = await fetch(
-          "https://devlab-backend-4d8f.onrender.com/api/auth/check",
+          "https://devlab-backend-4d8f.onrender.com/Backend/api/auth/check",
           {
             method: "GET",
             credentials: "include",

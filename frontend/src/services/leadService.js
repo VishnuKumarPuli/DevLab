@@ -1,4 +1,4 @@
-const API_URL = "https://devlab-backend-4d8f.onrender.com/api/leads";
+const API_URL = "https://devlab-backend-4d8f.onrender.com/Backend/api/leads";
 
 // Create Lead
 export const createLead = async (leadData) => {

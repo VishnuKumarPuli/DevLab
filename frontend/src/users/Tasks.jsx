@@ -16,7 +16,7 @@ function Tasks() {
       setError("");
 
       const response = await fetch(
-        "https://devlab-backend-4d8f.onrender.com/api/user/tasks",
+        "https://devlab-backend-4d8f.onrender.com/Backend/api/user/tasks",
         {
           method: "GET",
           credentials: "include",

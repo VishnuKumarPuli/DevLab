@@ -38,7 +38,7 @@ function UserRegister() {
       setLoading(true);
 
       const response = await fetch(
-      "https://devlab-backend-4d8f.onrender.com/api/user/auth/register",
+      "https://devlab-backend-4d8f.onrender.com/Backend/api/user/auth/register",
         {
           method: "POST",
           headers: {

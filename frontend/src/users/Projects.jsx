@@ -17,7 +17,7 @@ function Projects() {
       setError("");
 
       const response = await fetch(
-        "https://devlab-backend-4d8f.onrender.com/api/user/projects",
+        "https://devlab-backend-4d8f.onrender.com/Backend/api/user/projects",
         {
           method: "GET",
           credentials: "include",

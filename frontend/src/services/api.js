@@ -1,5 +1,5 @@
 const BASE_URL =
-    "https://devlab-backend-4d8f.onrender.com";
+    "https://devlab-backend-4d8f.onrender.com/Backend";
 
 const API_URL =
     `${BASE_URL}/api/leads`;
