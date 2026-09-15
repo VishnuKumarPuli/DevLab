@@ -1,0 +1,248 @@
+
+.admin-client-messages-page {
+    padding: 30px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.admin-client-messages-header {
+    margin-bottom: 28px;
+}
+
+.admin-client-messages-header h1 {
+    margin: 0 0 8px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.admin-client-messages-header p {
+    margin: 0;
+    color: #8b95a7;
+    font-size: 14px;
+}
+
+
+/* =========================
+   FORM CARD
+========================= */
+
+.client-message-form-card {
+    max-width: 850px;
+
+    padding: 28px;
+
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================
+   CARD HEADER
+========================= */
+
+.form-card-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    margin-bottom: 28px;
+}
+
+.form-card-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: rgba(99, 102, 241, 0.12);
+
+    font-size: 22px;
+}
+
+.form-card-header h2 {
+    margin: 0 0 5px;
+
+    font-size: 20px;
+}
+
+.form-card-header p {
+    margin: 0;
+
+    color: #8b95a7;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    border-radius: 10px;
+
+    padding: 12px 14px;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    color: inherit;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #6366f1;
+
+    box-shadow:
+        0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+.form-group textarea {
+    resize: vertical;
+
+    min-height: 150px;
+
+    line-height: 1.6;
+}
+
+.form-group select {
+    cursor: pointer;
+}
+
+
+/* =========================
+   MESSAGES
+========================= */
+
+.client-message-success {
+    margin-bottom: 20px;
+
+    padding: 12px 15px;
+
+    border-radius: 10px;
+
+    background: rgba(34, 197, 94, 0.1);
+
+    border: 1px solid rgba(34, 197, 94, 0.25);
+
+    color: #4ade80;
+
+    font-size: 13px;
+}
+
+.client-message-error {
+    margin-bottom: 20px;
+
+    padding: 12px 15px;
+
+    border-radius: 10px;
+
+    background: rgba(239, 68, 68, 0.1);
+
+    border: 1px solid rgba(239, 68, 68, 0.25);
+
+    color: #f87171;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.send-client-message-btn {
+    border: none;
+
+    border-radius: 10px;
+
+    padding: 12px 22px;
+
+    background: #6366f1;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.send-client-message-btn:hover {
+    opacity: 0.9;
+
+    transform: translateY(-1px);
+}
+
+.send-client-message-btn:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .admin-client-messages-page {
+        padding: 20px;
+    }
+
+    .client-message-form-card {
+        padding: 20px;
+    }
+
+    .admin-client-messages-header h1 {
+        font-size: 25px;
+    }
+}

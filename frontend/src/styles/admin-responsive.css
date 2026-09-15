@@ -1,0 +1,380 @@
+/* =========================================================
+   DEVLAB ADMIN RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  .admin-stats {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .portfolio-grid,
+  .testimonial-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .settings-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .quick-actions {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+
+@media (max-width: 800px) {
+
+  .admin-page {
+    padding: 25px 0;
+  }
+
+  .admin-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .admin-header h1 {
+    font-size: 25px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .payment-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group.full {
+    grid-column: auto;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .admin-container {
+    width: 92%;
+  }
+
+  .admin-login-page {
+    padding: 18px;
+  }
+
+  .admin-login-card {
+    padding: 28px 22px;
+  }
+
+  .admin-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .quick-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-grid,
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-panel,
+  .settings-card,
+  .project-card {
+    padding: 18px;
+  }
+
+  .admin-table {
+    min-width: 650px;
+  }
+
+  .action-buttons {
+    flex-wrap: wrap;
+  }
+
+  .settings-actions {
+    flex-direction: column;
+  }
+
+  .settings-actions .admin-btn {
+    width: 100%;
+  }
+}
+/* =========================================================
+   VIEW LEAD DETAILS - MOBILE ONLY
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .lead-modal-overlay {
+        padding: 15px;
+    }
+
+    .lead-modal {
+        max-width: 100%;
+        padding: 18px;
+
+        max-height: 90vh;
+    }
+
+    .lead-modal-header h2 {
+        font-size: 20px;
+    }
+
+    .lead-modal-close {
+        font-size: 26px;
+    }
+
+    .lead-modal-footer {
+        justify-content: stretch;
+    }
+
+    .admin-close-button {
+        width: 100%;
+    }
+
+}
+/* =========================================================
+   DASHBOARD STATS GRID
+   ========================================================= */
+
+.admin-stats-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   STAT CARD
+   ========================================================= */
+
+.admin-stat-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    transition: all 0.2s ease;
+}
+
+.admin-stat-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+
+/* =========================================================
+   STAT ICON
+   ========================================================= */
+
+.admin-stat-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    background: #eff6ff;
+
+    font-size: 22px;
+}
+
+
+/* =========================================================
+   STAT TEXT
+   ========================================================= */
+
+.admin-stat-card p {
+    margin: 0 0 5px;
+
+    color: #64748b;
+
+    font-size: 13px;
+
+    font-weight: 500;
+}
+
+.admin-stat-card h2 {
+    margin: 0;
+
+    color: #0f172a;
+
+    font-size: 25px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .admin-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .admin-stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* =========================================================
+   PROJECTS RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .admin-project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 800px) {
+  .admin-project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .admin-project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card-top {
+    flex-direction: column;
+  }
+
+  .project-card-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .admin-project-card > div[style] {
+    width: 100%;
+  }
+
+  .admin-project-card .admin-view-button,
+  .admin-project-card .admin-delete-button {
+    flex: 1;
+  }
+}
+@media (max-width: 600px) {
+    .admin-primary-button {
+        width: 100%;
+        margin-top: 12px;
+    }
+}
+
+
+/* =========================================================
+   PROJECT SEARCH & FILTERS - MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .project-filters {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .project-search,
+    .project-status-filter {
+        width: 100%;
+    }
+
+    .project-clear-button {
+        width: 100%;
+    }
+
+    .project-result-info {
+        margin-top: 2px;
+    }
+
+    .project-card-actions {
+        width: 100%;
+    }
+
+    .project-card-actions .admin-view-button,
+    .project-card-actions .admin-delete-button {
+        flex: 1;
+    }
+
+}
+
+
+
+/* =========================================================
+   TESTIMONIALS RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .admin-testimonials-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .admin-testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .admin-testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonial-actions {
+        flex-wrap: wrap;
+    }
+
+    .testimonial-actions .status {
+        margin-bottom: 5px;
+    }
+
+}

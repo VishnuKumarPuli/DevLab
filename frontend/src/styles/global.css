@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  background: var(--background);
+  color: var(--dark);
+
+  line-height: 1.6;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Container */
+
+.container {
+  width: min(92%, var(--container));
+  margin: 0 auto;
+}
+
+/* Sections */
+
+.section {
+  padding: 100px 0;
+}
+
+.page {
+  min-height: 70vh;
+  padding-top: 80px;
+}
+
+/* Section Heading */
+
+.section-heading {
+  max-width: 700px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.section-subtitle {
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  color: var(--primary);
+
+  font-size: 14px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.section-heading h2 {
+  margin-bottom: 15px;
+
+  color: var(--dark);
+
+  font-size: 38px;
+  line-height: 1.2;
+}
+
+.section-heading p {
+  color: var(--text-light);
+  font-size: 17px;
+}
+
+/* Grid */
+
+.cards-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 30px;
+}
+
+/* Action */
+
+.section-action {
+  margin-top: 45px;
+  text-align: center;
+}
+
+/* Light section */
+
+.light-section {
+  background: var(--background-dark);
+}
+
+/* CTA */
+
+.cta-section {
+  padding: 90px 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--primary),
+      var(--secondary)
+    );
+
+  color: var(--white);
+
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 750px;
+}
+
+.cta-content h2 {
+  margin-bottom: 15px;
+
+  font-size: 42px;
+  line-height: 1.2;
+}
+
+.cta-content p {
+  margin-bottom: 30px;
+
+  color: rgba(255, 255, 255, 0.9);
+
+  font-size: 18px;
+}

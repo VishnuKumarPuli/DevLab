@@ -1,0 +1,15 @@
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Build files
+build/
+target/
+
+# Database credentials
+db.properties
+
+# OS files
+.DS_Store
+Thumbs.db
