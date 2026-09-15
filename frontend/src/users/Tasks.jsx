@@ -16,7 +16,7 @@ function Tasks() {
       setError("");
 
       const response = await fetch(
-        "http://localhost:8080/Backend/api/user/tasks",
+        "https://devlab-backend-4d8f.onrender.com/api/user/tasks",
         {
           method: "GET",
           credentials: "include",

@@ -70,7 +70,7 @@ function AdminHeader({ onMenuClick }) {
     try {
 
       const response = await fetch(
-        "http://localhost:8080/Backend/api/notifications"
+        "https://devlab-backend-4d8f.onrender.com/api/notifications"
       );
 
       if (!response.ok) {
@@ -111,7 +111,7 @@ function AdminHeader({ onMenuClick }) {
     try {
 
       const response = await fetch(
-        "http://localhost:8080/Backend/api/messages"
+        "https://devlab-backend-4d8f.onrender.com/api/messages"
       );
 
       if (!response.ok) {
@@ -352,7 +352,7 @@ function AdminHeader({ onMenuClick }) {
 
           const response =
             await fetch(
-              `http://localhost:8080/Backend/api/notifications?id=${notification.id}`,
+              `https://devlab-backend-4d8f.onrender.com/api/notifications?id=${notification.id}`,
               {
                 method: "PUT",
               }
@@ -462,7 +462,7 @@ function AdminHeader({ onMenuClick }) {
 
           const response =
             await fetch(
-              `http://localhost:8080/Backend/api/messages/${message.id}`,
+              `https://devlab-backend-4d8f.onrender.com/api/messages/${message.id}`,
               {
                 method: "PUT",
                 headers: {
@@ -561,7 +561,7 @@ function AdminHeader({ onMenuClick }) {
 
           const response =
             await fetch(
-              "http://localhost:8080/Backend/api/notifications?action=readAll",
+              "https://devlab-backend-4d8f.onrender.com/api/notifications?action=readAll",
               {
                 method: "PUT",
               }
@@ -603,7 +603,7 @@ function AdminHeader({ onMenuClick }) {
 
                 const response =
                   await fetch(
-                    `http://localhost:8080/Backend/api/messages/${message.id}`,
+                    `https://devlab-backend-4d8f.onrender.com/api/messages/${message.id}`,
                     {
                       method: "PUT",
                       headers: {

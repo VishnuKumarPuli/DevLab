@@ -27,16 +27,20 @@ public class CorsFilter implements Filter {
         HttpServletResponse httpResponse =
                 (HttpServletResponse) response;
 
-
         // =========================================
-        // ALLOW REACT FRONTEND
+        // ALLOW LOCAL + LIVE REACT FRONTEND
         // =========================================
 
-        httpResponse.setHeader(
-                "Access-Control-Allow-Origin",
-                "http://localhost:5173"
-        );
+        String origin = httpRequest.getHeader("Origin");
 
+        if ("http://localhost:5173".equals(origin)
+                || "https://devlab-93yk.onrender.com".equals(origin)) {
+
+            httpResponse.setHeader(
+                    "Access-Control-Allow-Origin",
+                    origin
+            );
+        }
 
         // =========================================
         // ALLOW HTTP METHODS
@@ -47,7 +51,6 @@ public class CorsFilter implements Filter {
                 "GET, POST, PUT, DELETE, OPTIONS"
         );
 
-
         // =========================================
         // ALLOW REQUEST HEADERS
         // =========================================
@@ -57,7 +60,6 @@ public class CorsFilter implements Filter {
                 "Content-Type, Authorization"
         );
 
-
         // =========================================
         // ALLOW CREDENTIALS
         // =========================================
@@ -66,7 +68,6 @@ public class CorsFilter implements Filter {
                 "Access-Control-Allow-Credentials",
                 "true"
         );
-
 
         // =========================================
         // HANDLE PREFLIGHT REQUEST
@@ -81,7 +82,6 @@ public class CorsFilter implements Filter {
 
             return;
         }
-
 
         // =========================================
         // CONTINUE REQUEST

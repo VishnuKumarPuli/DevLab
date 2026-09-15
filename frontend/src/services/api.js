@@ -1,9 +1,47 @@
+const BASE_URL =
+    "https://devlab-backend-4d8f.onrender.com";
 
 const API_URL =
-    "http://localhost:8080/Backend/api/leads";
+    `${BASE_URL}/api/leads`;
 
 const PROJECT_API_URL =
-    "http://localhost:8080/Backend/api/projects";
+    `${BASE_URL}/api/projects`;
+
+const TASK_API_URL =
+    `${BASE_URL}/api/tasks`;
+
+const PAYMENT_API_URL =
+    `${BASE_URL}/api/payments`;
+
+const SERVICE_API_URL =
+    `${BASE_URL}/api/services`;
+
+const TESTIMONIAL_API_URL =
+    `${BASE_URL}/api/testimonials`;
+
+const PORTFOLIO_API =
+    `${BASE_URL}/api/portfolio`;
+
+const MESSAGES_API =
+    `${BASE_URL}/api/messages`;
+
+const USER_NOTIFICATIONS_API =
+    `${BASE_URL}/api/user/notifications`;
+
+const USER_PROFILE_API =
+    `${BASE_URL}/api/user/profile`;
+
+const USERS_API =
+    `${BASE_URL}/api/users`;
+
+const CLIENT_MESSAGES_API =
+    `${BASE_URL}/api/client-messages`;
+
+const SETTINGS_API =
+    `${BASE_URL}/api/settings`;
+
+const DASHBOARD_API =
+    `${BASE_URL}/api/dashboard`;
 
 
 // =========================================
@@ -240,9 +278,6 @@ export const deleteLead = async (id) => {
 // TASK API
 // =========================================================
 
-const TASK_API_URL =
-    "http://localhost:8080/Backend/api/tasks";
-
 
 // Get all tasks
 export const getAllTasks = async () => {
@@ -358,9 +393,6 @@ export const deleteTask = async (id) => {
 // =========================================================
 // PAYMENT API
 // =========================================================
-
-const PAYMENT_API_URL =
-    "http://localhost:8080/Backend/api/payments";
 
 
 // Get all payments
@@ -480,9 +512,6 @@ export const deletePayment = async (id) => {
 // SERVICE API
 // =========================================================
 
-const SERVICE_API_URL =
-    "http://localhost:8080/Backend/api/services";
-
 
 // Get all services
 export const getAllServices = async () => {
@@ -588,9 +617,6 @@ export const deleteService = async (id) => {
 // =========================================================
 // TESTIMONIAL API
 // =========================================================
-
-const TESTIMONIAL_API_URL =
-    "http://localhost:8080/Backend/api/testimonials";
 
 
 // Get all testimonials
@@ -733,9 +759,6 @@ export const deleteTestimonial = async (id) => {
 // ===============================
 // PORTFOLIO API
 // ===============================
-
-const PORTFOLIO_API =
-    "http://localhost:8080/Backend/api/portfolio";
 
 
 // Get all portfolio projects
@@ -911,9 +934,6 @@ export const updatePortfolioStatus = async (
 // MESSAGES API
 // =========================================================
 
-const MESSAGES_API =
-    "http://localhost:8080/Backend/api/messages";
-
 
 // Get all messages
 export const getAllMessages = async () => {
@@ -951,89 +971,6 @@ export const getMessageById = async (id) => {
 
     return await response.json();
 };
-
-
-
-
-
-const USER_NOTIFICATIONS_API =
-    "http://localhost:8080/Backend/api/user/notifications";
-
-export const getUserNotifications = async () => {
-    const response = await fetch(
-        USER_NOTIFICATIONS_API,
-        {
-            method: "GET",
-            credentials: "include",
-        }
-    );
-
-    return await handleResponse(response);
-};
-
-
-export const markUserNotificationAsRead = async (id) => {
-
-    const response = await fetch(
-        `http://localhost:8080/Backend/api/user/notifications?id=${id}`,
-        {
-            method: "PUT",
-            credentials: "include",
-        }
-    );
-
-    return await handleResponse(response);
-};
-
-
-// =========================================================
-// USER PROFILE API
-// =========================================================
-
-const USER_PROFILE_API =
-    "http://localhost:8080/Backend/api/user/profile";
-
-
-// Get logged-in user's profile
-export const getUserProfile = async () => {
-
-    const response =
-        await fetch(
-            USER_PROFILE_API,
-            {
-                method: "GET",
-                credentials: "include",
-            }
-        );
-
-    return await handleResponse(response);
-};
-
-
-// Update logged-in user's profile
-export const updateUserProfile = async (
-    profileData
-) => {
-
-    const response =
-        await fetch(
-            USER_PROFILE_API,
-            {
-                method: "PUT",
-
-                headers: {
-                    "Content-Type": "application/json",
-                },
-
-                credentials: "include",
-
-                body: JSON.stringify(profileData),
-            }
-        );
-
-    return await handleResponse(response);
-};
-
 
 
 // Add message
@@ -1127,12 +1064,97 @@ export const deleteMessage = async (
 
     return await response.json();
 };
+
+
+// =========================================================
+// USER NOTIFICATIONS API
+// =========================================================
+
+export const getUserNotifications = async () => {
+
+    const response =
+        await fetch(
+            USER_NOTIFICATIONS_API,
+            {
+                method: "GET",
+                credentials: "include",
+            }
+        );
+
+    return await handleResponse(response);
+};
+
+
+export const markUserNotificationAsRead = async (
+    id
+) => {
+
+    const response =
+        await fetch(
+            `${USER_NOTIFICATIONS_API}?id=${id}`,
+            {
+                method: "PUT",
+                credentials: "include",
+            }
+        );
+
+    return await handleResponse(response);
+};
+
+
+// =========================================================
+// USER PROFILE API
+// =========================================================
+
+
+// Get logged-in user's profile
+export const getUserProfile = async () => {
+
+    const response =
+        await fetch(
+            USER_PROFILE_API,
+            {
+                method: "GET",
+                credentials: "include",
+            }
+        );
+
+    return await handleResponse(response);
+};
+
+
+// Update logged-in user's profile
+export const updateUserProfile = async (
+    profileData
+) => {
+
+    const response =
+        await fetch(
+            USER_PROFILE_API,
+            {
+                method: "PUT",
+
+                headers: {
+                    "Content-Type":
+                        "application/json",
+                },
+
+                credentials: "include",
+
+                body:
+                    JSON.stringify(
+                        profileData
+                    ),
+            }
+        );
+
+    return await handleResponse(response);
+};
+
+
 // =========================================================
 // USERS API
 // =========================================================
-
-const USERS_API =
-    "http://localhost:8080/Backend/api/users";
 
 
 // Get all users
@@ -1148,9 +1170,6 @@ export const getAllUsers = async () => {
 // =========================================================
 // CLIENT MESSAGES API
 // =========================================================
-
-const CLIENT_MESSAGES_API =
-    "http://localhost:8080/Backend/api/client-messages";
 
 
 // Get messages for logged-in client
@@ -1216,15 +1235,9 @@ export const sendClientMessage = async (
 };
 
 
-
-
-
 // =========================================================
 // SETTINGS API
 // =========================================================
-
-const SETTINGS_API =
-    "http://localhost:8080/Backend/api/settings";
 
 
 // Get settings
@@ -1266,9 +1279,6 @@ export const updateSettings = async (
 // DASHBOARD API
 // =========================================================
 
-const DASHBOARD_API =
-    "http://localhost:8080/Backend/api/dashboard";
-
 
 // Get dashboard data
 export const getDashboard = async () => {
@@ -1278,4 +1288,3 @@ export const getDashboard = async () => {
 
     return await handleResponse(response);
 };
-

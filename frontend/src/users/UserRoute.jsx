@@ -9,7 +9,7 @@ function UserRoute() {
     const checkAuthentication = async () => {
       try {
         const response = await fetch(
-          "http://localhost:8080/Backend/api/user/auth/check",
+          "https://devlab-backend-4d8f.onrender.com/api/user/auth/check",
           {
             method: "GET",
             credentials: "include",

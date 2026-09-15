@@ -27,7 +27,7 @@ function AdminLogin() {
       setLoading(true);
 
       const response = await fetch(
-        "http://localhost:8080/Backend/api/auth/login",
+        "https://devlab-backend-4d8f.onrender.com/api/auth/login",
         {
           method: "POST",
 

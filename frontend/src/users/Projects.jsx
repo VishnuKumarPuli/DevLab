@@ -17,7 +17,7 @@ function Projects() {
       setError("");
 
       const response = await fetch(
-        "http://localhost:8080/Backend/api/user/projects",
+        "https://devlab-backend-4d8f.onrender.com/api/user/projects",
         {
           method: "GET",
           credentials: "include",

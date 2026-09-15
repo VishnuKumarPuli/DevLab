@@ -16,7 +16,7 @@ function Payments() {
       setError("");
 
       const response = await fetch(
-        "http://localhost:8080/Backend/api/user/payments",
+        "https://devlab-backend-4d8f.onrender.com/api/user/payments",
         {
           method: "GET",
           credentials: "include",

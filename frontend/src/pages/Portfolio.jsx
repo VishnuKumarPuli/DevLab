@@ -10,7 +10,7 @@ function Portfolio() {
     const loadProjects = async () => {
       try {
         const response = await fetch(
-          "http://localhost:8080/Backend/api/portfolio"
+          "https://devlab-backend-4d8f.onrender.com/api/portfolio"
         );
 
         if (!response.ok) {
