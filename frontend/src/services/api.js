@@ -1,5 +1,19 @@
+
+// =========================================================
+// DEVLAB API SERVICE
+// =========================================================
+
+// =========================================================
+// BASE URL
+// =========================================================
+
 const BASE_URL =
     "https://devlab-backend-4d8f.onrender.com/Backend";
+
+
+// =========================================================
+// API URLS
+// =========================================================
 
 const API_URL =
     `${BASE_URL}/api/leads`;
@@ -44,9 +58,9 @@ const DASHBOARD_API =
     `${BASE_URL}/api/dashboard`;
 
 
-// =========================================
+// =========================================================
 // REUSABLE API RESPONSE HANDLER
-// =========================================
+// =========================================================
 
 const handleResponse = async (response) => {
 
@@ -81,12 +95,14 @@ const handleResponse = async (response) => {
 // PROJECT API
 // =========================================================
 
-
 // Get all projects
 export const getAllProjects = async () => {
 
     const response =
-        await fetch(PROJECT_API_URL);
+        await fetch(PROJECT_API_URL, {
+            method: "GET",
+            credentials: "include",
+        });
 
     return await handleResponse(response);
 };
@@ -97,7 +113,11 @@ export const getProjectById = async (id) => {
 
     const response =
         await fetch(
-            `${PROJECT_API_URL}?id=${id}`
+            `${PROJECT_API_URL}?id=${id}`,
+            {
+                method: "GET",
+                credentials: "include",
+            }
         );
 
     return await handleResponse(response);
@@ -112,6 +132,8 @@ export const createProject = async (projectData) => {
             PROJECT_API_URL,
             {
                 method: "POST",
+
+                credentials: "include",
 
                 headers: {
                     "Content-Type":
@@ -162,6 +184,7 @@ export const updateProject = async (
             `${PROJECT_API_URL}?${params.toString()}`,
             {
                 method: "PUT",
+                credentials: "include",
             }
         );
 
@@ -178,6 +201,7 @@ export const deleteProject = async (id) => {
             `${PROJECT_API_URL}?id=${id}`,
             {
                 method: "DELETE",
+                credentials: "include",
             }
         );
 
@@ -189,7 +213,6 @@ export const deleteProject = async (id) => {
 // =========================================================
 // LEAD API
 // =========================================================
-
 
 // Create a new lead
 export const createLead = async (leadData) => {
@@ -221,7 +244,13 @@ export const createLead = async (leadData) => {
 export const getAllLeads = async () => {
 
     const response =
-        await fetch(API_URL);
+        await fetch(
+            API_URL,
+            {
+                method: "GET",
+                credentials: "include",
+            }
+        );
 
     return await handleResponse(response);
 };
@@ -232,7 +261,11 @@ export const getLeadById = async (id) => {
 
     const response =
         await fetch(
-            `${API_URL}?id=${id}`
+            `${API_URL}?id=${id}`,
+            {
+                method: "GET",
+                credentials: "include",
+            }
         );
 
     return await handleResponse(response);
@@ -250,6 +283,7 @@ export const updateLeadStatus = async (
             `${API_URL}?id=${id}&status=${encodeURIComponent(status)}`,
             {
                 method: "PUT",
+                credentials: "include",
             }
         );
 
@@ -266,6 +300,7 @@ export const deleteLead = async (id) => {
             `${API_URL}?id=${id}`,
             {
                 method: "DELETE",
+                credentials: "include",
             }
         );
 
@@ -278,12 +313,17 @@ export const deleteLead = async (id) => {
 // TASK API
 // =========================================================
 
-
 // Get all tasks
 export const getAllTasks = async () => {
 
     const response =
-        await fetch(TASK_API_URL);
+        await fetch(
+            TASK_API_URL,
+            {
+                method: "GET",
+                credentials: "include",
+            }
+        );
 
     return await handleResponse(response);
 };
@@ -294,7 +334,11 @@ export const getTaskById = async (id) => {
 
     const response =
         await fetch(
-            `${TASK_API_URL}?id=${id}`
+            `${TASK_API_URL}?id=${id}`,
+            {
+                method: "GET",
+                credentials: "include",
+            }
         );
 
     return await handleResponse(response);
@@ -309,6 +353,8 @@ export const createTask = async (taskData) => {
             TASK_API_URL,
             {
                 method: "POST",
+
+                credentials: "include",
 
                 headers: {
                     "Content-Type":
@@ -366,6 +412,7 @@ export const updateTask = async (
             `${TASK_API_URL}?${params.toString()}`,
             {
                 method: "PUT",
+                credentials: "include",
             }
         );
 
@@ -382,6 +429,7 @@ export const deleteTask = async (id) => {
             `${TASK_API_URL}?id=${id}`,
             {
                 method: "DELETE",
+                credentials: "include",
             }
         );
 
@@ -394,12 +442,17 @@ export const deleteTask = async (id) => {
 // PAYMENT API
 // =========================================================
 
-
 // Get all payments
 export const getAllPayments = async () => {
 
     const response =
-        await fetch(PAYMENT_API_URL);
+        await fetch(
+            PAYMENT_API_URL,
+            {
+                method: "GET",
+                credentials: "include",
+            }
+        );
 
     return await handleResponse(response);
 };
@@ -410,7 +463,11 @@ export const getPaymentById = async (id) => {
 
     const response =
         await fetch(
-            `${PAYMENT_API_URL}?id=${id}`
+            `${PAYMENT_API_URL}?id=${id}`,
+            {
+                method: "GET",
+                credentials: "include",
+            }
         );
 
     return await handleResponse(response);
@@ -427,6 +484,8 @@ export const createPayment = async (
             PAYMENT_API_URL,
             {
                 method: "POST",
+
+                credentials: "include",
 
                 headers: {
                     "Content-Type":
@@ -484,6 +543,7 @@ export const updatePayment = async (
             `${PAYMENT_API_URL}?${params.toString()}`,
             {
                 method: "PUT",
+                credentials: "include",
             }
         );
 
@@ -500,6 +560,7 @@ export const deletePayment = async (id) => {
             `${PAYMENT_API_URL}?id=${id}`,
             {
                 method: "DELETE",
+                credentials: "include",
             }
         );
 
@@ -512,12 +573,17 @@ export const deletePayment = async (id) => {
 // SERVICE API
 // =========================================================
 
-
 // Get all services
 export const getAllServices = async () => {
 
     const response =
-        await fetch(SERVICE_API_URL);
+        await fetch(
+            SERVICE_API_URL,
+            {
+                method: "GET",
+                credentials: "include",
+            }
+        );
 
     return await handleResponse(response);
 };
@@ -528,7 +594,11 @@ export const getServiceById = async (id) => {
 
     const response =
         await fetch(
-            `${SERVICE_API_URL}?id=${id}`
+            `${SERVICE_API_URL}?id=${id}`,
+            {
+                method: "GET",
+                credentials: "include",
+            }
         );
 
     return await handleResponse(response);
@@ -545,6 +615,8 @@ export const createService = async (
             SERVICE_API_URL,
             {
                 method: "POST",
+
+                credentials: "include",
 
                 headers: {
                     "Content-Type":
@@ -590,6 +662,7 @@ export const updateService = async (
             `${SERVICE_API_URL}?${params.toString()}`,
             {
                 method: "PUT",
+                credentials: "include",
             }
         );
 
@@ -606,6 +679,7 @@ export const deleteService = async (id) => {
             `${SERVICE_API_URL}?id=${id}`,
             {
                 method: "DELETE",
+                credentials: "include",
             }
         );
 
@@ -618,12 +692,17 @@ export const deleteService = async (id) => {
 // TESTIMONIAL API
 // =========================================================
 
-
 // Get all testimonials
 export const getAllTestimonials = async () => {
 
     const response =
-        await fetch(TESTIMONIAL_API_URL);
+        await fetch(
+            TESTIMONIAL_API_URL,
+            {
+                method: "GET",
+                credentials: "include",
+            }
+        );
 
     return await handleResponse(response);
 };
@@ -634,7 +713,11 @@ export const getTestimonialById = async (id) => {
 
     const response =
         await fetch(
-            `${TESTIMONIAL_API_URL}?id=${id}`
+            `${TESTIMONIAL_API_URL}?id=${id}`,
+            {
+                method: "GET",
+                credentials: "include",
+            }
         );
 
     return await handleResponse(response);
@@ -651,6 +734,8 @@ export const createTestimonial = async (
             TESTIMONIAL_API_URL,
             {
                 method: "POST",
+
+                credentials: "include",
 
                 headers: {
                     "Content-Type":
@@ -702,6 +787,7 @@ export const updateTestimonial = async (
             `${TESTIMONIAL_API_URL}?${params.toString()}`,
             {
                 method: "PUT",
+                credentials: "include",
             }
         );
 
@@ -732,6 +818,7 @@ export const updateTestimonialStatus = async (
             `${TESTIMONIAL_API_URL}?${params.toString()}`,
             {
                 method: "PUT",
+                credentials: "include",
             }
         );
 
@@ -748,6 +835,7 @@ export const deleteTestimonial = async (id) => {
             `${TESTIMONIAL_API_URL}?id=${id}`,
             {
                 method: "DELETE",
+                credentials: "include",
             }
         );
 
@@ -756,16 +844,21 @@ export const deleteTestimonial = async (id) => {
 };
 
 
-// ===============================
+// =========================================================
 // PORTFOLIO API
-// ===============================
-
+// =========================================================
 
 // Get all portfolio projects
 export const getAllPortfolios = async () => {
 
     const response =
-        await fetch(PORTFOLIO_API);
+        await fetch(
+            PORTFOLIO_API,
+            {
+                method: "GET",
+                credentials: "include",
+            }
+        );
 
     if (!response.ok) {
 
@@ -784,7 +877,11 @@ export const getPortfolioById = async (id) => {
 
     const response =
         await fetch(
-            `${PORTFOLIO_API}/${id}`
+            `${PORTFOLIO_API}/${id}`,
+            {
+                method: "GET",
+                credentials: "include",
+            }
         );
 
     if (!response.ok) {
@@ -809,6 +906,8 @@ export const addPortfolio = async (
             PORTFOLIO_API,
             {
                 method: "POST",
+
+                credentials: "include",
 
                 headers: {
                     "Content-Type":
@@ -846,6 +945,8 @@ export const updatePortfolio = async (
             {
                 method: "PUT",
 
+                credentials: "include",
+
                 headers: {
                     "Content-Type":
                         "application/json",
@@ -880,6 +981,7 @@ export const deletePortfolio = async (
             `${PORTFOLIO_API}/${id}`,
             {
                 method: "DELETE",
+                credentials: "include",
             }
         );
 
@@ -906,6 +1008,8 @@ export const updatePortfolioStatus = async (
             `${PORTFOLIO_API}/${id}`,
             {
                 method: "PUT",
+
+                credentials: "include",
 
                 headers: {
                     "Content-Type":
@@ -934,12 +1038,17 @@ export const updatePortfolioStatus = async (
 // MESSAGES API
 // =========================================================
 
-
 // Get all messages
 export const getAllMessages = async () => {
 
     const response =
-        await fetch(MESSAGES_API);
+        await fetch(
+            MESSAGES_API,
+            {
+                method: "GET",
+                credentials: "include",
+            }
+        );
 
     if (!response.ok) {
 
@@ -958,7 +1067,11 @@ export const getMessageById = async (id) => {
 
     const response =
         await fetch(
-            `${MESSAGES_API}/${id}`
+            `${MESSAGES_API}/${id}`,
+            {
+                method: "GET",
+                credentials: "include",
+            }
         );
 
     if (!response.ok) {
@@ -1018,6 +1131,8 @@ export const updateMessageStatus = async (
             {
                 method: "PUT",
 
+                credentials: "include",
+
                 headers: {
                     "Content-Type":
                         "application/json",
@@ -1051,6 +1166,7 @@ export const deleteMessage = async (
             `${MESSAGES_API}/${id}`,
             {
                 method: "DELETE",
+                credentials: "include",
             }
         );
 
@@ -1106,7 +1222,6 @@ export const markUserNotificationAsRead = async (
 // USER PROFILE API
 // =========================================================
 
-
 // Get logged-in user's profile
 export const getUserProfile = async () => {
 
@@ -1156,12 +1271,17 @@ export const updateUserProfile = async (
 // USERS API
 // =========================================================
 
-
 // Get all users
 export const getAllUsers = async () => {
 
     const response =
-        await fetch(USERS_API);
+        await fetch(
+            USERS_API,
+            {
+                method: "GET",
+                credentials: "include",
+            }
+        );
 
     return await handleResponse(response);
 };
@@ -1170,7 +1290,6 @@ export const getAllUsers = async () => {
 // =========================================================
 // CLIENT MESSAGES API
 // =========================================================
-
 
 // Get messages for logged-in client
 export const getClientMessages = async () => {
@@ -1239,12 +1358,17 @@ export const sendClientMessage = async (
 // SETTINGS API
 // =========================================================
 
-
 // Get settings
 export const getSettings = async () => {
 
     const response =
-        await fetch(SETTINGS_API);
+        await fetch(
+            SETTINGS_API,
+            {
+                method: "GET",
+                credentials: "include",
+            }
+        );
 
     return await handleResponse(response);
 };
@@ -1266,6 +1390,8 @@ export const updateSettings = async (
                         "application/json",
                 },
 
+                credentials: "include",
+
                 body:
                     JSON.stringify(settings),
             }
@@ -1279,12 +1405,17 @@ export const updateSettings = async (
 // DASHBOARD API
 // =========================================================
 
-
 // Get dashboard data
 export const getDashboard = async () => {
 
     const response =
-        await fetch(DASHBOARD_API);
+        await fetch(
+            DASHBOARD_API,
+            {
+                method: "GET",
+                credentials: "include",
+            }
+        );
 
     return await handleResponse(response);
 };
